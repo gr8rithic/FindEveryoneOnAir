@@ -1,0 +1,2 @@
+# Find Everyone on Air
+This is a repository that finds out the flights using open sky network API. This will be an Flutter app which will be cross pltform and will help identyfying planes flying around using the transponder code
