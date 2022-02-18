@@ -4,6 +4,6 @@ import uvicorn
 
 app = FastAPI()
 
-@app.get('/')
-def root():
-    return {"message": "Hello World"}
+@app.get('/login/{name}')
+def root(name):
+    return {"message": name}
