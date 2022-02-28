@@ -8,29 +8,107 @@ class RegistrationPage extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
+          resizeToAvoidBottomInset: false,
           appBar: AppBar(
             title: const Text('Registration Page'),
           ),
           body: Container(
             alignment: Alignment.topCenter,
-            child: Column(children: <Widget>[
-              ButtonTheme(
-                minWidth: 350.0,
-                height: 60.0,
-                child: RaisedButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  color: Colors.blueAccent[700],
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/login');
-                  },
-                  child: const Text(
-                    "Login",
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  TextFormField(
+                    cursorColor: Theme.of(context).cursorColor,
+                    initialValue: 'Password',
+                    decoration: InputDecoration(
+                      icon: Icon(Icons.person),
+                      labelText: 'Name',
+                      labelStyle: TextStyle(
+                        color: Color(0xFF2962FF),
+                      ),
+                      helperText: 'Name',
+                      suffixIcon: Icon(
+                        Icons.check_circle,
+                      ),
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF2962FF)),
+                      ),
+                    ),
                   ),
-                ),
-              ),
-            ]),
+                  TextFormField(
+                    cursorColor: Theme.of(context).cursorColor,
+                    initialValue: 'Email Id',
+                    decoration: InputDecoration(
+                      icon: Icon(Icons.email),
+                      labelText: 'Email Id',
+                      labelStyle: TextStyle(
+                        color: Color(0xFF2962FF),
+                      ),
+                      helperText: 'Email Id',
+                      suffixIcon: Icon(
+                        Icons.check_circle,
+                      ),
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF2962FF)),
+                      ),
+                    ),
+                  ),
+                  TextFormField(
+                    cursorColor: Theme.of(context).cursorColor,
+                    initialValue: 'Username',
+                    decoration: InputDecoration(
+                      icon: Icon(Icons.person),
+                      labelText: 'Username',
+                      labelStyle: TextStyle(
+                        color: Color(0xFF2962FF),
+                      ),
+                      helperText: 'Username',
+                      suffixIcon: Icon(
+                        Icons.check_circle,
+                      ),
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF2962FF)),
+                      ),
+                    ),
+                  ),
+                  TextFormField(
+                    cursorColor: Theme.of(context).cursorColor,
+                    initialValue: 'How you came to know',
+                    decoration: InputDecoration(
+                      icon: Icon(Icons.lightbulb),
+                      labelText: 'How you came to know',
+                      labelStyle: TextStyle(
+                        color: Color(0xFF2962FF),
+                      ),
+                      helperText: 'A Short Paragraph',
+                      suffixIcon: Icon(
+                        Icons.check_circle,
+                      ),
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xFF2962FF)),
+                      ),
+                    ),
+                  ),
+                  ButtonTheme(
+                    minWidth: 350.0,
+                    height: 60.0,
+                    child: RaisedButton(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      color: Colors.blueAccent[700],
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/login');
+                      },
+                      child: const Text(
+                        "Login",
+                        style: TextStyle(
+                            fontSize: 22, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ),
+                ]),
           ),
         ));
   }

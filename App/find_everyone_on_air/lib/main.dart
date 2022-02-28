@@ -2,7 +2,7 @@ import 'package:find_everyone_on_air/screens/login.dart';
 import 'package:find_everyone_on_air/screens/registration.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'screens/splashscreen.dart';
+import 'screens/homescreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => const SplashScreen(),
+        '/': (context) => const HomePage(),
         '/registration': (context) => const RegistrationPage(),
         '/login': (context) => const LoginPage(),
       },
