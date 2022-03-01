@@ -56,7 +56,7 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                const Padding(padding: EdgeInsets.all(50)),
+                const Padding(padding: EdgeInsets.all(60)),
                 ButtonTheme(
                   minWidth: 350.0,
                   height: 60.0,

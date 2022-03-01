@@ -9,16 +9,15 @@ class RegistrationPage extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: Scaffold(
           resizeToAvoidBottomInset: false,
-          appBar: AppBar(
-            title: const Text('Registration Page'),
-          ),
           body: Container(
+            color: Colors.white,
             alignment: Alignment.topCenter,
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
+                  Image.asset('assets/images/Travel_booking.png'),
                   TextFormField(
                     cursorColor: Theme.of(context).cursorColor,
                     initialValue: 'Name',
@@ -73,25 +72,7 @@ class RegistrationPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  TextFormField(
-                    cursorColor: Theme.of(context).cursorColor,
-                    initialValue: 'How you came to know',
-                    decoration: const InputDecoration(
-                      icon: Icon(Icons.lightbulb),
-                      labelText: 'How you came to know',
-                      labelStyle: TextStyle(
-                        color: Color(0xFF2962FF),
-                      ),
-                      helperText: 'A Short Paragraph',
-                      suffixIcon: Icon(
-                        Icons.check_circle,
-                      ),
-                      enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xFF2962FF)),
-                      ),
-                    ),
-                  ),
-                  const Padding(padding: EdgeInsets.all(100)),
+                  const Padding(padding: EdgeInsets.all(80)),
                   ButtonTheme(
                     minWidth: 350.0,
                     height: 60.0,
@@ -103,7 +84,7 @@ class RegistrationPage extends StatelessWidget {
                         Navigator.pushNamed(context, '/login');
                       },
                       child: const Text(
-                        "Login",
+                        "Create Account",
                         style: TextStyle(
                             fontSize: 22, fontWeight: FontWeight.bold),
                       ),
@@ -116,11 +97,11 @@ class RegistrationPage extends StatelessWidget {
                       primary: const Color(0xFF2962FF),
                     ),
                     child: const Text(
-                      'Sign in',
+                      'Login',
                       style: TextStyle(fontSize: 16),
                     ),
                     onPressed: () {
-                      Navigator.pushNamed(context, '/registration');
+                      Navigator.pushNamed(context, '/login');
                     },
                   ),
                 ]),
