@@ -22,7 +22,7 @@ class RegistrationPage extends StatelessWidget {
                   TextFormField(
                     cursorColor: Theme.of(context).cursorColor,
                     initialValue: 'Name',
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       icon: Icon(Icons.person),
                       labelText: 'Name',
                       labelStyle: TextStyle(
@@ -40,7 +40,7 @@ class RegistrationPage extends StatelessWidget {
                   TextFormField(
                     cursorColor: Theme.of(context).cursorColor,
                     initialValue: 'Email Id',
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       icon: Icon(Icons.email),
                       labelText: 'Email Id',
                       labelStyle: TextStyle(
@@ -58,7 +58,7 @@ class RegistrationPage extends StatelessWidget {
                   TextFormField(
                     cursorColor: Theme.of(context).cursorColor,
                     initialValue: 'Username',
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       icon: Icon(Icons.person),
                       labelText: 'Username',
                       labelStyle: TextStyle(
@@ -76,7 +76,7 @@ class RegistrationPage extends StatelessWidget {
                   TextFormField(
                     cursorColor: Theme.of(context).cursorColor,
                     initialValue: 'How you came to know',
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       icon: Icon(Icons.lightbulb),
                       labelText: 'How you came to know',
                       labelStyle: TextStyle(
@@ -113,7 +113,7 @@ class RegistrationPage extends StatelessWidget {
                   const Text('Have an Account?'),
                   TextButton(
                     style: TextButton.styleFrom(
-                      primary: Color(0xFF2962FF),
+                      primary: const Color(0xFF2962FF),
                     ),
                     child: const Text(
                       'Sign in',

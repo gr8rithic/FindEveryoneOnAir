@@ -20,9 +20,10 @@ class LoginPage extends StatelessWidget {
                 Image.asset('assets/images/Travel_booking.png'),
                 const Padding(padding: EdgeInsets.all(10)),
                 TextFormField(
+                  // ignore: deprecated_member_use
                   cursorColor: Theme.of(context).cursorColor,
                   initialValue: 'Email ID',
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     icon: Icon(Icons.email),
                     labelText: 'Email',
                     labelStyle: TextStyle(
@@ -40,7 +41,7 @@ class LoginPage extends StatelessWidget {
                 TextFormField(
                   cursorColor: Theme.of(context).cursorColor,
                   initialValue: 'Password',
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     icon: Icon(Icons.password),
                     labelText: 'Password',
                     labelStyle: TextStyle(
@@ -77,7 +78,7 @@ class LoginPage extends StatelessWidget {
                 const Text('Do not have account?'),
                 TextButton(
                   style: TextButton.styleFrom(
-                    primary: Color(0xFF2962FF),
+                    primary: const Color(0xFF2962FF),
                   ),
                   child: const Text(
                     'Sign Up',
