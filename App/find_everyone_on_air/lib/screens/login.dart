@@ -10,8 +10,7 @@ class LoginPage extends StatelessWidget {
       home: Scaffold(
         resizeToAvoidBottomInset: false,
         backgroundColor: Colors.white,
-        body: Container(
-          color: Colors.white,
+        body: SingleChildScrollView(
           child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
@@ -56,19 +55,38 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                const Text('Does not have account?'),
+                const Padding(padding: EdgeInsets.all(50)),
+                ButtonTheme(
+                  minWidth: 350.0,
+                  height: 60.0,
+                  child: RaisedButton(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    color: Colors.blueAccent[700],
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/login');
+                    },
+                    child: const Text(
+                      "Login",
+                      style:
+                          TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+                const Padding(padding: EdgeInsets.all(20)),
+                const Text('Do not have account?'),
                 TextButton(
                   style: TextButton.styleFrom(
                     primary: Color(0xFF2962FF),
                   ),
                   child: const Text(
-                    'Sign in',
-                    style: TextStyle(fontSize: 20),
+                    'Sign Up',
+                    style: TextStyle(fontSize: 16),
                   ),
                   onPressed: () {
                     Navigator.pushNamed(context, '/registration');
                   },
-                )
+                ),
               ]),
         ),
       ),

@@ -21,7 +21,7 @@ class RegistrationPage extends StatelessWidget {
                 children: <Widget>[
                   TextFormField(
                     cursorColor: Theme.of(context).cursorColor,
-                    initialValue: 'Password',
+                    initialValue: 'Name',
                     decoration: InputDecoration(
                       icon: Icon(Icons.person),
                       labelText: 'Name',
@@ -91,6 +91,7 @@ class RegistrationPage extends StatelessWidget {
                       ),
                     ),
                   ),
+                  const Padding(padding: EdgeInsets.all(100)),
                   ButtonTheme(
                     minWidth: 350.0,
                     height: 60.0,
@@ -107,6 +108,20 @@ class RegistrationPage extends StatelessWidget {
                             fontSize: 22, fontWeight: FontWeight.bold),
                       ),
                     ),
+                  ),
+                  const Padding(padding: EdgeInsets.all(20)),
+                  const Text('Have an Account?'),
+                  TextButton(
+                    style: TextButton.styleFrom(
+                      primary: Color(0xFF2962FF),
+                    ),
+                    child: const Text(
+                      'Sign in',
+                      style: TextStyle(fontSize: 16),
+                    ),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/registration');
+                    },
                   ),
                 ]),
           ),
