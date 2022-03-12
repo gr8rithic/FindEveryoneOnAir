@@ -1,9 +1,17 @@
-from unicodedata import name
-from fastapi import FastAPI
-import uvicorn
+import psycopg2
 
-app = FastAPI()
+mydb = psycopg2.connect(
+    host = 'localhost',
+    user = 'postgres',
+    password = 'Rithic@2002',
+    database = 'hello'
+)
 
-@app.get('/login/{name}')
-def root(name):
-    return {"message": name}
+mycursor = mydb.cursor()
+
+sql = "INSERT INTO loginformdata(username,password) VALUES(%s,%s)"
+username = "test"
+password = "123"
+values = (username,password)
+mycursor.execute(sql,values)
+mydb.commit()
