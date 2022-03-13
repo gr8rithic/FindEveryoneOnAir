@@ -17,6 +17,7 @@ class RegistrationPage extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
+                  const Padding(padding: EdgeInsets.all(20)),
                   Image.asset('assets/images/Travel_booking.png'),
                   TextFormField(
                     cursorColor: Theme.of(context).cursorColor,
@@ -72,7 +73,7 @@ class RegistrationPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const Padding(padding: EdgeInsets.all(80)),
+                  const Padding(padding: EdgeInsets.all(60)),
                   ButtonTheme(
                     minWidth: 350.0,
                     height: 60.0,

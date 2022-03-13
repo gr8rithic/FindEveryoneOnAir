@@ -16,8 +16,8 @@ class LoginPage extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                const Padding(padding: EdgeInsets.all(50)),
-                Image.asset('assets/images/Travel_booking.png'),
+                const Padding(padding: EdgeInsets.all(40)),
+                Image.asset('assets/images/login.png'),
                 const Padding(padding: EdgeInsets.all(10)),
                 TextFormField(
                   // ignore: deprecated_member_use
@@ -56,7 +56,7 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                const Padding(padding: EdgeInsets.all(60)),
+                const Padding(padding: EdgeInsets.all(70)),
                 ButtonTheme(
                   minWidth: 350.0,
                   height: 60.0,
