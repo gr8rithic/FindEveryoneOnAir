@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 import uvicorn
 import psycopg2
-import mariadb
 from geopy.geocoders import Nominatim
 
 mydb = psycopg2.connect(
