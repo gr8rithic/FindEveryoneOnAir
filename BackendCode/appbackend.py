@@ -2,6 +2,7 @@ from fastapi import FastAPI
 import uvicorn
 import psycopg2
 import mariadb
+from geopy.geocoders import Nominatim
 
 mydb = psycopg2.connect(
     host = 'localhost',
@@ -22,10 +23,16 @@ def route(username,password):
     mydb.commit()
     return {'name':username, 'password':password}
 
-@app.get('/getdata/{latitude}/{longitude}')
-def route1(latitude,longitude):
-    latitude_lower = int(latitude) - 1
-    latitude_higher = int(latitude) + 1
-    longitude_lower = int(longitude) - 1
-    longitude_higher = int(longitude) + 1
+@app.get('/getdata/{city}/{country}')
+def route1(city,country):
+    geolocator = Nominatim(user_agent="my_user_agent")
+    city ="Kolkata"
+    country ="India"
+    loc = geolocator.geocode(city+','+ country)
+    latitude = loc.latitude
+    longitude = loc.longitude
+    latitude_lower = latitude - 1
+    latitude_higher = latitude + 1
+    longitude_lower = longitude - 1
+    longitude_higher = longitude + 1
     return {'latitude_lower':latitude_lower, 'longitude_lower':longitude_lower, 'latitude_higher':latitude_higher, 'longitude_higher':longitude_higher}
