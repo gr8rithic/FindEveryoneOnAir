@@ -1,7 +1,9 @@
+from urllib import response
 from fastapi import FastAPI
 import uvicorn
 import psycopg2
 from geopy.geocoders import Nominatim
+import requests
 
 mydb = psycopg2.connect(
     host = 'localhost',
@@ -34,4 +36,8 @@ def route1(city,country):
     latitude_higher = latitude + 1
     longitude_lower = longitude - 1
     longitude_higher = longitude + 1
-    return {'latitude_lower':latitude_lower, 'longitude_lower':longitude_lower, 'latitude_higher':latitude_higher, 'longitude_higher':longitude_higher}
+    url = f"https://rithicsky:rithic2002@opensky-network.org/api/states/all?lamin={latitude_lower}&lomin={longitude_lower}&lamax={latitude_higher}&lomax={longitude_higher}"
+    response = requests.get(url)
+    print(response)
+    print(response.text)
+    return response.text
