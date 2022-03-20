@@ -1,7 +1,20 @@
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class LoginPage extends StatefulWidget {
+  LoginPage({Key? key}) : super(key: key);
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  var _username;
+
+  var _password;
+
+  final usernamecon = TextEditingController(text: "Email ID");
+
+  final passwordcon = TextEditingController(text: "Password");
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +35,7 @@ class LoginPage extends StatelessWidget {
                 TextFormField(
                   // ignore: deprecated_member_use
                   cursorColor: Theme.of(context).cursorColor,
-                  initialValue: 'Email ID',
+                  controller: usernamecon,
                   decoration: const InputDecoration(
                     icon: Icon(Icons.email),
                     labelText: 'Email',
@@ -40,7 +53,7 @@ class LoginPage extends StatelessWidget {
                 ),
                 TextFormField(
                   cursorColor: Theme.of(context).cursorColor,
-                  initialValue: 'Password',
+                  controller: passwordcon,
                   decoration: const InputDecoration(
                     icon: Icon(Icons.password),
                     labelText: 'Password',
@@ -66,6 +79,10 @@ class LoginPage extends StatelessWidget {
                     color: Colors.blueAccent[700],
                     onPressed: () {
                       Navigator.pushNamed(context, '/login');
+                      setState(() {
+                        _username = usernamecon.text;
+                        _password = passwordcon.text;
+                      });
                     },
                     child: const Text(
                       "Login",

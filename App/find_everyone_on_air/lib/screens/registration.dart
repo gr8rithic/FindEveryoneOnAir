@@ -1,9 +1,22 @@
 import 'package:flutter/material.dart';
 
-class RegistrationPage extends StatelessWidget {
+class RegistrationPage extends StatefulWidget {
   const RegistrationPage({Key? key}) : super(key: key);
 
   @override
+  State<RegistrationPage> createState() => _RegistrationPageState();
+}
+
+class _RegistrationPageState extends State<RegistrationPage> {
+  @override
+  var _name;
+  var _username;
+  var _password;
+
+  final namecon = TextEditingController(text: "Name");
+  final usernamecon = TextEditingController(text: "Email ID");
+  final passwordcon = TextEditingController(text: "Password");
+
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -21,7 +34,7 @@ class RegistrationPage extends StatelessWidget {
                   Image.asset('assets/images/Travel_booking.png'),
                   TextFormField(
                     cursorColor: Theme.of(context).cursorColor,
-                    initialValue: 'Name',
+                    controller: namecon,
                     decoration: const InputDecoration(
                       icon: Icon(Icons.person),
                       labelText: 'Name',
@@ -39,7 +52,7 @@ class RegistrationPage extends StatelessWidget {
                   ),
                   TextFormField(
                     cursorColor: Theme.of(context).cursorColor,
-                    initialValue: 'Email Id',
+                    controller: usernamecon,
                     decoration: const InputDecoration(
                       icon: Icon(Icons.email),
                       labelText: 'Email Id',
@@ -57,14 +70,14 @@ class RegistrationPage extends StatelessWidget {
                   ),
                   TextFormField(
                     cursorColor: Theme.of(context).cursorColor,
-                    initialValue: 'Username',
+                    controller: passwordcon,
                     decoration: const InputDecoration(
-                      icon: Icon(Icons.person),
-                      labelText: 'Username',
+                      icon: Icon(Icons.password),
+                      labelText: 'Password',
                       labelStyle: TextStyle(
                         color: Color(0xFF2962FF),
                       ),
-                      helperText: 'Username',
+                      helperText: 'Password',
                       suffixIcon: Icon(
                         Icons.check_circle,
                       ),
