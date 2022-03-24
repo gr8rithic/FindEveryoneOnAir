@@ -12,9 +12,9 @@ class _LoginPageState extends State<LoginPage> {
 
   var _password;
 
-  final usernamecon = TextEditingController(text: "Email ID");
+  final usernamecon = TextEditingController();
 
-  final passwordcon = TextEditingController(text: "Password");
+  final passwordcon = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +78,7 @@ class _LoginPageState extends State<LoginPage> {
                         borderRadius: BorderRadius.circular(10)),
                     color: Colors.blueAccent[700],
                     onPressed: () {
-                      Navigator.pushNamed(context, '/registration');
+                      Navigator.pushNamed(context, '/mainpage');
                       setState(() {
                         _username = usernamecon.text;
                         _password = passwordcon.text;

@@ -13,9 +13,9 @@ class _RegistrationPageState extends State<RegistrationPage> {
   var _username;
   var _password;
 
-  final namecon = TextEditingController(text: "Name");
-  final usernamecon = TextEditingController(text: "Email ID");
-  final passwordcon = TextEditingController(text: "Password");
+  final namecon = TextEditingController();
+  final usernamecon = TextEditingController();
+  final passwordcon = TextEditingController();
 
   Widget build(BuildContext context) {
     return MaterialApp(
