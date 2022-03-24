@@ -3,6 +3,7 @@ import 'package:find_everyone_on_air/screens/registration.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'screens/homescreen.dart';
+import 'screens/finaldatapage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,6 +26,7 @@ class _MyAppState extends State<MyApp> {
         '/': (context) => const HomePage(),
         '/registration': (context) => const RegistrationPage(),
         '/login': (context) => LoginPage(),
+        '/mainpage': (context) => const FinalDataPage(),
       },
       theme: ThemeData(
           textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)),
