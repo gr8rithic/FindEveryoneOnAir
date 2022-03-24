@@ -78,7 +78,7 @@ class _LoginPageState extends State<LoginPage> {
                         borderRadius: BorderRadius.circular(10)),
                     color: Colors.blueAccent[700],
                     onPressed: () {
-                      Navigator.pushNamed(context, '/login');
+                      Navigator.pushNamed(context, '/registration');
                       setState(() {
                         _username = usernamecon.text;
                         _password = passwordcon.text;
